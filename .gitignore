@@ -1,0 +1,27 @@
+# ===== Python Packages / Cache =====
+__pycache__/
+*.pyc
+*.pyo
+venv/
+env/
+.venv/
+
+# ===== PyInstaller Build System =====
+build/
+dist/
+*.spec
+
+# ===== IDE / OS =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ===== User Data (Ignore actual Excel Files) =====
+input_sold/*.xlsx
+input_sold/*.xls
+input_all_data/*.xlsx
+input_all_data/*.xls
+output/*.xlsx
+output/*.xls
