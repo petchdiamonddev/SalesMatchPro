@@ -1,28 +1,36 @@
-# ===== Python Packages / Cache =====
+# ===== Python Packages & Virtual Environments =====
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*$py.class
+*.so
 venv/
 env/
 .venv/
+ENV/
 
-# ===== PyInstaller Build System =====
+# ===== PyInstaller & Build Artifacts =====
+# Do not commit binaries or build folders to git
 build/
 dist/
 *.spec
-!SalesMatchPro.exe
+*.exe
+*.bin
+*.dll
 
-# ===== IDE / OS =====
+# ===== IDE / OS / Office Temp Files =====
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
 Desktop.ini
+~$*.xlsx
+~$*.xls
 
-# ===== User Data (Ignore actual Excel Files) =====
-input_sold/*.xlsx
-input_sold/*.xls
-input_all_data/*.xlsx
-input_all_data/*.xls
-output/*.xlsx
-output/*.xls
+# ===== User Data (Prevent leakage of sensitive customer/sales data) =====
+# Keep folder structures via .gitkeep, but ignore all actual data files
+input_sold/*
+!input_sold/.gitkeep
+input_all_data/*
+!input_all_data/.gitkeep
+output/*
+!output/.gitkeep
